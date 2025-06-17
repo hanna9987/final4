@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Helvetica Neue', 'sans-serif'],
+        'league-spartan': ['"League Spartan"', 'sans-serif'],
+        'lilita-one': ['"Lilita One"', 'cursive'],
+        'suit': ['"SUIT Variable"', 'sans-serif'],
       },
       maxWidth: {
         'mobile': '428px', // iPhone 14 Plus width
@@ -19,6 +21,20 @@ export default {
           500: '#3b82f6',
           600: '#2563eb',
         }
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
       }
     },
   },

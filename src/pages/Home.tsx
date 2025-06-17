@@ -65,7 +65,17 @@ const Home: React.FC = () => {
       {/* Health Stats Grid */}
       <div className="grid grid-cols-2 gap-4">
         {healthStats.map((stat, index) => (
-          <div key={index} className="bg-white rounded-2xl p-4 shadow-sm border border-blue-100 hover:shadow-md transition-shadow">
+          <div 
+            key={index} 
+            className={`bg-white rounded-2xl p-4 shadow-sm border border-blue-100 hover:shadow-md transition-shadow ${
+              stat.label === '보행 분석' ? 'cursor-pointer' : ''
+            }`}
+            onClick={() => {
+              if (stat.label === '보행 분석') {
+                navigate('/gait-analysis');
+              }
+            }}
+          >
             <h4 className="text-sm font-medium text-gray-600">{stat.label}</h4>
             <div className="mt-2">
               <div className="text-xl font-bold text-gray-800">{stat.value}</div>

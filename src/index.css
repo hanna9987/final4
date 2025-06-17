@@ -24,4 +24,8 @@
   .gradient-bg {
     @apply bg-gradient-to-b from-blue-50 to-blue-100;
   }
+  
+  .card-shadow {
+    @apply shadow-sm border border-blue-100;
+  }
 } 

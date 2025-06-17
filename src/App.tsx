@@ -6,6 +6,7 @@ import HealthInfo from './pages/HealthInfo';
 import TestMain from './pages/TestMain';
 import TestResults from './pages/TestResults';
 import WalkingAnalysis from './pages/WalkingAnalysis';
+import GaitAnalysis from './pages/GaitAnalysis';
 import { ROUTES } from './utils/constants';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path={ROUTES.TEST} element={<TestMain />} />
             <Route path={ROUTES.TEST_RESULTS} element={<TestResults />} />
             <Route path={ROUTES.WALKING} element={<WalkingAnalysis />} />
+            <Route path="/gait-analysis" element={<GaitAnalysis />} />
           </Route>
         </Routes>
       </div>
